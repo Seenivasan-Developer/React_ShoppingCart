@@ -1,6 +1,6 @@
 import React from "react";
 
-function Navibar(){
+function Navibar({count}){
     return <>
     {/* <!-- Navigation--> */}
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -25,7 +25,7 @@ function Navibar(){
                         <button className="btn btn-outline-dark" type="submit">
                             <i className="bi-cart-fill me-1"></i>
                             Cart
-                            <span className="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                            <span className="badge bg-dark text-white ms-1 rounded-pill">{count}</span>
                         </button>
                     </form>
                 </div>

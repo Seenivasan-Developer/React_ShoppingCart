@@ -5,7 +5,6 @@ import Footr from "./Footr";
 import Content from "./Content";
 
 function App() {
-
   const data = [
     {
       ProductImgSrc: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
@@ -80,9 +79,9 @@ function App() {
       IsSaleBatch:false,
     }
   ]
-
+  
   return <>
-    <Navibar />
+    <Navibar count={"0"}/>
     <HeadSection />
     {/* <!-- Section--> */}
     <section className="py-5">
