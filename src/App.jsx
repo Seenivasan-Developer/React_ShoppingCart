@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navibar from "./Navibar";
 import HeadSection from "./HeadSection";
 import Footr from "./Footr";
@@ -79,9 +79,9 @@ function App() {
       IsSaleBatch:false,
     }
   ]
-  
+  let [cartCount, setCartCount]=useState(0);
   return <>
-    <Navibar count={"0"}/>
+    <Navibar count={cartCount}/>
     <HeadSection />
     {/* <!-- Section--> */}
     <section className="py-5">
@@ -89,7 +89,7 @@ function App() {
         <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
           {
             data.map((e, i) => {
-             return <Content ProductDetails={e} key={i} />
+             return <Content ProductDetails={e} setCartCount={setCartCount} cartCount={cartCount} key={i} />
             })
           }
 
